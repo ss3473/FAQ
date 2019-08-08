@@ -12,6 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js?render=6LcYGLIUAAAAABwNHyda2kxeTrgmlHRDFBqYVDuR"></script>
     <script>
         grecaptcha.ready(function() {
@@ -95,6 +96,18 @@
             </div>
         </div>
     </nav>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script>
+        $(function() {
+            $('#form').submit(function(event) {
+                var verified = grecaptcha.getResponse();
+                if (verified.length === 0) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
 
     <main class="py-4">
         <div class="col-12">

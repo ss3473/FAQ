@@ -49,10 +49,10 @@
 
                         <div class="form-group row">
                             <div class=".col-md-6.offset-md-4">
-                                <div class="g-recaptcha" data-sitekey="{{env('RECAPTCHA_SITE_KEY')}}"></div>
+                                <div class="g-recaptcha" data-sitekey="6LcYGLIUAAAAABwNHyda2kxeTrgmlHRDFBqYVDuR"></div>
                                 @if($errors->has('g-recaptcha-response'))
                                     <span class="invalid-feedback" style="display:block">
-                                        <strong>{{$errors->first('g-captcha-response')}}</strong>
+                                        <strong>{{$errors->first('g-recaptcha-response')}}</strong>
                                     </span>
                                     @endif
                             </div>
