@@ -12,6 +12,14 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcYGLIUAAAAABwNHyda2kxeTrgmlHRDFBqYVDuR"></script>
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LcYGLIUAAAAABwNHyda2kxeTrgmlHRDFBqYVDuR', {action: 'homepage'}).then(function(token) {
+            ...
+            });
+        });
+    </script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
